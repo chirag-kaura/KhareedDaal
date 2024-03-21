@@ -1,0 +1,166 @@
+.dashboard-container{
+  padding-top: 3px;
+}
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input{
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+.product-list{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+  align-items: center;
+}
+
+.product{
+  width: calc(25% -20px);
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+
+  gap: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-shrink: 2;
+  align-items:normal;
+}
+
+.product:hover{
+  box-shadow: 0 5px 15px rgba(0 0 0 0.2);
+}
+
+
+.product-card{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+.product-image {
+  width: 100%;
+  max-width: 120px; /* Adjust based on your preference */
+  height: auto;
+  border-radius: 4px;
+}
+
+
+.product-info {
+  text-align: center;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-price{
+  font-size: 16px;
+  color: #666;
+}
+
+.modal-backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal{
+  background :white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+}
+
+
+@media(max-width:768px){
+  .product{
+    width: calc(50%=-20px);
+  }
+}
+
+
+@media(max-width:480px){
+  .product{
+    width: 100%;
+  }
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  bottom: 0;;
+  
+}
+
+
+.pagination button{
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover{
+  background-color: #e9e9e9;
+}
+
+.pagination button :disabled{
+  color: #999;
+  cursor:not-allowed;
+}
+
+.pagination button.active{
+  background-color: #007bff;
+  color: white;
+  border-color:#007bff ;
+}
+
+
+
+
+
+
+
+
+      {/* <ProductList products={products}/> */}
